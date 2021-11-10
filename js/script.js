@@ -10,7 +10,9 @@ const vueApp = new Vue({
         getEmails() {
             const url = 'https://flynn.boolean.careers/exercises/api/random/mail'
             
-            let initialTime = performance.now()
+            // let initialTime = performance.now()
+            
+            this.emails = []
 
             // ripeto la API call per 10 volte
             for (let i = 0; i < 10; i++) {
@@ -20,10 +22,10 @@ const vueApp = new Vue({
                 })
             }
 
-            let finalTime = performance.now()
+            // let finalTime = performance.now()
 
-            // calcolo quanto tempo ha impiegato il server per darmi tutte le risposte
-            this.timeElapsed = (finalTime - initialTime).toFixed(2)
+            // // calcolo quanto tempo ha impiegato il server per darmi tutte le risposte
+            // this.timeElapsed = (finalTime - initialTime).toFixed(2)
         }
     }
 })
